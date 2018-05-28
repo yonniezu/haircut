@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Amazing Amy’s Barbershop</title>
+</head>
+<body>
+    <h1> Amazing Amy’s Barbershop</h1>
+    <p>A Fresh Cut You And Your Family!</p>
+     
+    <p>Kevin</p>
+    <img src="http://www.oldtownbarberclub.com/wp-content/uploads/2015/01/slide01.jpg">
+
+    <p>Jay</p>
+    <img src="http://americanbeautycollege.com/wp-content/uploads/2014/09/barber.png">
+
+    <p>Helen</p>
+    <img src="https://tse4-mm.cn.bing.net/th?id=OIP.w3WLDEtRv93JHpfrpdAQKAHaFd&pid=Api">
+
+    <h1>Place Your Order</h1>
+    <form action="{% url 'haircut:home_page' %} " method="POST">
+        {% csrf_token %}"
+        <input type="text" name="time" placeholder = "enter the time"><br>
+        <textarea placeholder="Text the barber you want" name="barber"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+    <h1>Your Order</h1>
+    <p>Time: {{time}}</p>
+    <p>Barber: {{barber}}</p>
+
+</body>
+</html>
+ 
